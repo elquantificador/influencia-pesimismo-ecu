@@ -20,7 +20,7 @@ Para 2023, cerca del 90% de ecuatorianos considera que la situación del país e
 # Evolución del pesimismo económico y político.
 
 ```{r}
-knitr::include_graphics('figures/grafico_conjunto.png')
+knitr::include_graphics('../figures/grafico_conjunto.png')
 ```
 El derrotismo sobre el Estado está tan normalizado que podría parecer que esta actitud siempre ha sido parte del panorama ecuatoriano, pero no es así. Para demostrar que el pesimismo económico y político ha aumentado en los últimos años se puede utilizar los resultados de la encuesta del Barómetro de las Américas (AB) del Latin American Public Opinion Project (LAPOP). Estos sondeos de opinión pública permiten inferir el porcentaje anual de ecuatorianos pesimistas en los ejes mencionados. En el panel izquierdo del gráfico de arriba se puede observar que el porcentaje que opina que la situación económica del país es peor que hace doce meses está relacionado con el porcentaje que cree que su situación económica personal actual es peor.  Asimismo, la proporción de ecuatorianos que desaprueba el trabajo del Presidente de turno presenta una correlación positiva con el pesimismo económico de la población. Los picos y caídas de estas variables responden a eventos relevantes en la historia reciente del país. 
 Durante los diez años del gobierno de Rafael Correa se puede visualizar que en la mayoría del periodo los ecuatorianos se sentían optimistas sobre el escenario del país, particularmente en 2014, año en el cual no más del 20% de ciudadanos desconfíaban  la situación económica y un 30% desaprobaba la gestión del mandatario. Esto podría justificarse con el significativo aumento del precio del barril de petróleo en aquel periodo, lo cual se reflejó en el crecimiento económico del Estado y, por ende, implicó una mejor situación económica y política para el país [@baquero_mendez_booms_2015]. 
@@ -34,7 +34,7 @@ Las expectativas sobre el futuro de la economía son fundamentales, puesto que l
 Como se puede observar en el gráfico inferior, esta relación se presenta en el caso del Ecuador. En 2016, año complicado tanto en lo económico como en lo político, se evidenciaron aumentos estadisticamente significativos en los porcentajes de pesimismo y desempleo, como se ve a continuación. 
 
 ```{r}
-knitr::include_graphics('figures/grafico_pesimismo_vs_desempleo.png')
+knitr::include_graphics('../figures/grafico_pesimismo_vs_desempleo.png')
 ```
 
 Una situación similar ocurre con la informalidad y el empleo no adecuado, este último refiriéndose a aquellos trabajadores que no aportan al sistema de seguridad social o que no satisfacen las condiciones mínimas de horas o ingresos [@enemdu_indicadores_2015]. Los empleadores no despiden a los trabajadores actuales en caso de recesión, puesto que los costos de despido en el Ecuador son muy altos. Sin embargo, se desincentiva la contratación con estos altos costos, disminuyendo así el empleo adecuado cuando las pocas plazas de trabajo existentes se destruyen. De hecho, según la Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU), de diciembre de 2021 a enero de 2022 se redujeron 106.651 plazas de empleo adecuado, coincidiendo con un período de significativa desaprobación del Presidente Guillermo Lasso, quien en sus primeros seis meses de mandato ya contaba con el 60% de desaprobación [@celag_ecuador_2021]. 
@@ -46,7 +46,7 @@ La desconfianza en el Presidente es una medida pertinente para analizar la falta
 De la mano de la desconfianza en el mandatario está el porcentaje de ecuatorianos sin respeto por las instituciones políticas. Como se puede observar en el gráfico abajo, la falta de respeto por dichas instituciones y la desconfianza en el Presidente siguen tendencias similares, cuyos picos y caídas han sido influenciados por los mismos eventos. Este factor es relevante para el análisis, puesto que el desempeño del gobierno se relaciona positivamente con la confianza en entidades públicas [@perry_trust_2021]. Esto lleva al siguiente punto, los efectos adversos políticos de la desconfianza en el Estado.
 
 ```{r}
-knitr::include_graphics('figures/grafico_desconfianza_politica.png')
+knitr::include_graphics('../figures/grafico_desconfianza_politica.png')
 ```
 
 La falta de respeto y desconfianza en el Ejecutivo junto con sus instituciones políticas generan tensiones y antagonismo entre la población y el Gobierno. Esto produce descontento social y con ello el ambiente propicio para que un sector de la población crea que es el indicado para hacer el trabajo del Gobierno, generalmente llegando al poder de manera ilegal. Esto se debe a que la desconfianza política puede generar que la ciudadanía apoye a la acción colectiva violenta y opiniones políticas extremas, produciéndose así conflictos tempestuosos y protestas, las cuales pueden concluir en un golpe de Estado [@gulliver_political_2022].
