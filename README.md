@@ -6,12 +6,12 @@ Este repositorio almacena todos los archivos necesarios para el análisis de act
 
 - `code/` - Scripts de R para el análisis de datos y generación de gráficos
 - `data/` - Datos de la encuesta LAPOP
-- `report/` - Archivos del reporte (documento principal, bibliografía, figuras)
+- `figures/` - Gráficos generados para el reporte
+- `report/` - Archivos del reporte (documento principal, bibliografía)
   - `report.Rmd` - Documento principal del reporte en R Markdown
   - `report.html` - Versión HTML del reporte
   - `refs.bib` - Referencias bibliográficas
   - `style.csl` - Estilo de citación
-  - `figures/` - Gráficos generados para el reporte
 
 ## Cómo replicar el análisis
 
@@ -21,4 +21,4 @@ Se tienen dos opciones para replicar el análisis:
 
 - Descargar un archivo comprimido desde la página web del repositorio y ejecutar los scripts en la carpeta `code`.
 
-Los scripts en `code/` generarán automáticamente las figuras en `report/figures/` que son utilizadas por el reporte principal. 
+Los scripts en `code/` generarán automáticamente las figuras en `figures/` que son utilizadas por el reporte principal. 

@@ -158,7 +158,7 @@ graph_sit_econ_df <-
                      breaks = c(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
                      labels = c('10', '20', '30', '40', '50', '60', '70', '80', '90', '100'))
 
-  ggsave("report/figures/grafico_pesimismo_econ.png",plot = graph_sit_econ_df, 
+  ggsave("figures/grafico_pesimismo_econ.png",plot = graph_sit_econ_df, 
          device = "png", 
          width = 10, 
          height = 6, 
@@ -196,7 +196,7 @@ graph_pres_aprov_dic<-
                      breaks = c(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
                      labels = c('10', '20', '30', '40', '50', '60', '70', '80', '90', '100'))
   
-ggsave("report/figures/grafico_desaprobacion_presidente.png",plot = graph_pres_aprov_dic, 
+ggsave("figures/grafico_desaprobacion_presidente.png",plot = graph_pres_aprov_dic, 
         device = "png", 
         width = 10, 
         height = 6, 
@@ -215,7 +215,7 @@ graph_conjunto <-
                   theme = theme(plot.caption = element_text(color = "grey30", hjust = 0, face = 'italic'),
                                 plot.title = element_text(hjust = 0.5, face = 'bold', size = 17)))
 
-ggsave("report/figures/grafico_conjunto.png",plot = graph_conjunto, 
+ggsave("figures/grafico_conjunto.png",plot = graph_conjunto, 
        device = "png", 
        width = 12.5, 
        height = 7, 
@@ -275,7 +275,7 @@ graph_sit_econ_unem_df <-
                      breaks = c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
                      labels = c(0, '10', '20', '30', '40', '50', '60', '70'))
 
-ggsave("report/figures/grafico_pesimismo_vs_desempleo.png",
+ggsave("figures/grafico_pesimismo_vs_desempleo.png",
        plot = graph_sit_econ_unem_df, 
        device = "png", 
        width = 10, 
@@ -356,7 +356,7 @@ graph_sit_pol_df <-
                      breaks = c(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
                      labels = c('10', '20', '30', '40', '50', '60', '70', '80'))
 
-ggsave("report/figures/grafico_desconfianza_politica.png",plot = graph_sit_pol_df, 
+ggsave("figures/grafico_desconfianza_politica.png",plot = graph_sit_pol_df, 
        device = "png", 
        width = 10, 
        height = 6, 
