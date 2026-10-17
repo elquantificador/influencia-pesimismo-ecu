@@ -8,49 +8,78 @@ repositorios.
 
 - **Título:** Pesimismo y desconfianza: ¿Cómo afectan a la situación económica y política del país?
 - **Descripción del repositorio:** Articulo del Quantificador sobre el actitudes pesimistas en el Ecuador.
-- **Autoría:** [COMPLETAR: nombres, igual que en el sitio]
-- **Fecha de publicación:** [COMPLETAR: AAAA-MM-DD]
-- **Artículo publicado:** [COMPLETAR: enlace a elquantificador.org]
-- **Categoría:** [COMPLETAR: Economía, Política, Salud, Educación o Valores y
-  comportamiento]
-- **Edición:** [COMPLETAR: por ejemplo, Julio-Diciembre 2026]
+- **Autoría:** Romina Estévez
+- **Fecha de publicación:** 2023-10-13
+- **Artículo publicado:** https://elquantificador.org/post/economia/2023-10-13-pesimismo-y-desconfianza/
+- **Categoría:** Economía (el artículo también está en Valores y comportamiento)
+- **Edición:** Septiembre 2023 - Marzo 2024
 
 ## Estado
 
-[COMPLETAR: en preparación, en revisión editorial o publicado. Anota qué falta
-para cerrar el artículo.]
+Publicado el 2023-10-13. El artículo del sitio no declara `repository_url`; la
+vinculación con este repositorio se hizo por título, autora y gráficos.
 
 ## Pregunta y alcance
 
-[COMPLETAR: dos o tres oraciones con la pregunta, el periodo, la cobertura
-geográfica y la unidad de análisis.]
+El artículo pregunta cómo se relacionan el pesimismo y la desconfianza de los
+ecuatorianos con la situación económica y política del país. Usa las rondas
+2004 a 2019 del Barómetro de las Américas de LAPOP para Ecuador y estima, por
+año, porcentajes ponderados con diseño muestral (pesimismo sobre la economía
+del país y la personal, desaprobación del Presidente, desempleo, desconfianza
+en el Presidente, falta de respeto por las instituciones y justificación de un
+golpe de Estado frente a mucha corrupción). La unidad de análisis es la
+persona encuestada.
 
 ## Requisitos
 
-- R [COMPLETAR: versión, por ejemplo 4.5.x].
-- Paquetes de R: [COMPLETAR: lista en orden alfabético].
+- R: versión no documentada en el repositorio.
+- Paquetes de R: dplyr, ggplot2, here, patchwork, survey, tidyverse. El script
+  los instala si faltan. Para compilar `report/report.Rmd` también se necesitan
+  knitr y rmarkdown.
 
 ## Fuentes de datos
 
 | Fuente | Institución | Periodo | Acceso | Script |
 |---|---|---|---|---|
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR: descarga automática o manual] | `code/cleaning/00_download_fuente.R` |
+| Barómetro de las Américas (AmericasBarometer), base de Ecuador preparada por LIDE | LAPOP, Vanderbilt University | Rondas 2004, 2006, 2008, 2010, 2012, 2014, 2016 y 2019 | Descarga automática desde `laboratoriolide/americas-barometer` en GitHub; copia local en `data/ab_04_19.csv`. Fuente original: www.LapopSurveys.org | `code/pesimismo.R` |
 
-Si alguna fuente no permite descarga automática, explica aquí cómo obtenerla y
-dónde colocarla en `data/raw/`.
+La descarga automática del script apunta a `ab_04_09.csv` y la guarda como
+`data/ab_04_19.csv`; usa la copia incluida en `data/` si la descarga cambia el
+contenido (ver "Cómo replicar").
 
 ## Salidas
 
-- `outputs/tables/[COMPLETAR].csv`: [COMPLETAR: qué contiene].
-- `outputs/graphs/[COMPLETAR].png`: [COMPLETAR: qué muestra].
-- `article/images/graficoN.png`: copias numeradas según el orden del texto.
+- `figures/grafico_pesimismo_econ.png`: pesimismo sobre la situación económica
+  del país y la personal.
+- `figures/grafico_desaprobacion_presidente.png`: desaprobación del trabajo del
+  Presidente de turno.
+- `figures/grafico_conjunto.png`: panel combinado de los dos gráficos
+  anteriores.
+- `figures/grafico_pesimismo_vs_desempleo.png`: pesimismo económico frente a
+  desempleo.
+- `figures/grafico_desconfianza_politica.png`: desconfianza política frente a
+  justificación de un golpe de Estado.
+- `report/report.html`: versión renderizada del texto del artículo.
 
 ## Cómo replicar en este repositorio
 
-Este repositorio conserva sus instrucciones originales en la sección
-"README anterior". Si todavía no tiene `MASTER.R`, sigue esas instrucciones.
-Cuando se migre a la estructura estándar, reemplaza esta sección por los pasos
-de `MASTER.R`.
+Este repositorio tiene un único script, sin `MASTER.R`; los pasos salen de su
+README anterior y de `code/pesimismo.R`.
+
+1. Clona el repositorio (o descarga el comprimido) y abre
+   `influencia-pesimismo-ecu.Rproj` para que las rutas relativas (`data/` y
+   `figures/`) apunten a la raíz del proyecto.
+2. Ejecuta `code/pesimismo.R`. Descarga la base de LAPOP a
+   `data/ab_04_19.csv`, calcula las tablas ponderadas con `survey` y guarda las
+   cinco figuras en `figures/`.
+3. Compila `report/report.Rmd` para reproducir el texto del artículo; usa las
+   figuras de `figures/`.
+
+Advertencia verificada en el script: la URL de descarga termina en
+`ab_04_09.csv`, aunque el destino se llama `ab_04_19.csv`. Si el archivo
+descargado cubriera solo 2004 a 2009, faltarían las rondas posteriores que usan
+los gráficos; en ese caso restituye la copia versionada de `data/ab_04_19.csv`
+antes de ejecutar el análisis. No verifiqué qué contiene hoy el archivo remoto.
 
 ## README anterior
 
