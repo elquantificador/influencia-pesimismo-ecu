@@ -6,13 +6,19 @@ if(!require(tidyverse)) install.packages("tidyverse", repos = "http://cran.us.r-
 if(!require(survey)) install.packages("survey", repos = "http://cran.us.r-project.org")
 if(!require(dplyr)) install.packages("dplyr", repos = "http://cran.us.r-project.org")
 if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
-if(!require(patchwork)) install.packages("here", repos = "http://cran.us.r-project.org")
+if(!require(patchwork)) install.packages("patchwork", repos = "http://cran.us.r-project.org")
 if(!require(here)) install.packages("here", repos = "http://cran.us.r-project.org")
 
 # Cargar datos
 url <- "https://raw.githubusercontent.com/laboratoriolide/americas-barometer/main/output/csv/ab_04_09.csv"
 
-download.file(url, here("data/ab_04_19.csv"))
+# En el repositorio de LIDE el archivo se llama ab_04_09.csv, pero contiene
+# las rondas 2004 a 2019 (verificado). Se descarga solo si falta la copia local
+# de data/, para no sobrescribir el archivo versionado.
+if (!file.exists("data/ab_04_19.csv")) {
+  dir.create("data", recursive = TRUE, showWarnings = FALSE)
+  download.file(url, "data/ab_04_19.csv", mode = "wb")
+}
 
 df <- read.csv("data/ab_04_19.csv")
 
