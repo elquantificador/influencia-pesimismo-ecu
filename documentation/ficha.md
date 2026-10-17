@@ -43,9 +43,9 @@ persona encuestada.
 |---|---|---|---|---|
 | Barómetro de las Américas (AmericasBarometer), base de Ecuador preparada por LIDE | LAPOP, Vanderbilt University | Rondas 2004, 2006, 2008, 2010, 2012, 2014, 2016 y 2019 | Descarga automática desde `laboratoriolide/americas-barometer` en GitHub; copia local en `data/ab_04_19.csv`. Fuente original: www.LapopSurveys.org | `code/pesimismo.R` |
 
-La descarga automática del script apunta a `ab_04_09.csv` y la guarda como
-`data/ab_04_19.csv`; usa la copia incluida en `data/` si la descarga cambia el
-contenido (ver "Cómo replicar").
+El archivo remoto se llama `ab_04_09.csv`, pero contiene las rondas 2004 a 2019
+(verificado: 17 992 filas, las ocho rondas). El script solo lo descarga si falta
+`data/ab_04_19.csv`; la copia versionada en `data/` es la que se usa por defecto.
 
 ## Salidas
 
@@ -69,17 +69,12 @@ README anterior y de `code/pesimismo.R`.
 1. Clona el repositorio (o descarga el comprimido) y abre
    `influencia-pesimismo-ecu.Rproj` para que las rutas relativas (`data/` y
    `figures/`) apunten a la raíz del proyecto.
-2. Ejecuta `code/pesimismo.R`. Descarga la base de LAPOP a
-   `data/ab_04_19.csv`, calcula las tablas ponderadas con `survey` y guarda las
-   cinco figuras en `figures/`.
+2. Ejecuta `code/pesimismo.R` con la raíz del repositorio como directorio de
+   trabajo. Lee `data/ab_04_19.csv` (si falta, la descarga desde el repositorio
+   de LIDE), calcula las tablas ponderadas con `survey` y guarda las cinco
+   figuras en `figures/`.
 3. Compila `report/report.Rmd` para reproducir el texto del artículo; usa las
    figuras de `figures/`.
-
-Advertencia verificada en el script: la URL de descarga termina en
-`ab_04_09.csv`, aunque el destino se llama `ab_04_19.csv`. Si el archivo
-descargado cubriera solo 2004 a 2009, faltarían las rondas posteriores que usan
-los gráficos; en ese caso restituye la copia versionada de `data/ab_04_19.csv`
-antes de ejecutar el análisis. No verifiqué qué contiene hoy el archivo remoto.
 
 ## README anterior
 
